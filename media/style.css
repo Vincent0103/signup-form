@@ -23,14 +23,14 @@ body {
   the width of the image */
 }
 
-img {
+.bg-left > img {
   height: 100vh;
-  width: auto;
 }
 
-.form-container {
-  /* display: flex;
-  flex-direction: row; */
+.page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .bg-logo {
@@ -68,7 +68,100 @@ img {
 }
 
 .bg-right {
-  background-color: black;
+  width: 100vw;
+}
+
+.form-advertisement {
+  position: absolute;
+  top: -120px;
+}
+
+.form-container {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
   height: 200px;
-  width: 100px;
+  padding: 20px 20px;
+}
+
+.actual-form {
+  padding-left: 20px;
+}
+
+.actual-form > p:first-child {
+  margin: 0;
+  font-weight: 700;
+  text-shadow:
+    -.4px -.4px rgba(0, 0, 0, .1),
+    0 -.4px rgba(0, 0, 0, .1),
+    .4px -.4px rgba(0, 0, 0, .1),
+    .4px 0 rgba(0, 0, 0, .1),
+    .4px .4px rgba(0, 0, 0, .1),
+    0 .4px rgba(0, 0, 0, .1),
+    -.4px .4px rgba(0, 0, 0, .1),
+    -.4px 0 rgba(0, 0, 0, .1);
+}
+
+.actual-inputs {
+  display: flex;
+  gap: 50px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container > label {
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: .7rem;
+}
+
+.left-inputs > * {
+  margin: 20px 0;
+}
+
+.right-inputs > * {
+  margin: 20px 0;
+}
+
+button[type="submit"] {
+  margin: 40px 20px 10px 0;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(66, 139, 176);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+
+input {
+  border: 1px solid rgba(0, 0, 0, .2);
+  height: 20px;
+  border-radius: 3px;
+}
+
+input:focus {
+  border-color: #428bb0;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+  outline: none;
+}
+
+.error > input {
+  border-color: red;
+}
+
+.error-help.error::after {
+  content: "* Passwords do not match";
+  font-size: .6rem;
+  color: red;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-advertisement {
+    top: -140px;
+  }
 }
