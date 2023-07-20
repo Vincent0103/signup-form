@@ -67,6 +67,28 @@ body {
  height: 5rem;
 }
 
+.bg-left > .credit {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+.bg-left > .credit p {
+  margin: 10px 0;
+  font-size: .7rem;
+}
+
+.bg-left > .credit a:visited {
+  color: white;
+}
+
 .bg-right {
   width: 100vw;
 }
